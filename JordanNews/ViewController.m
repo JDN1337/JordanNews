@@ -8,8 +8,12 @@
 
 #import "ViewController.h"
 #import "ApiManager.h"
+#import "ArticlesParser.h"
+#import "ArticleModel.h"
 
 @interface ViewController ()
+
+@property (strong, nonatomic) NSArray* articlesList;
 
 @end
 
@@ -41,7 +45,19 @@
             [self presentViewController:alertController animated:YES completion:nil];
         }
         else{
-            NSLog(@"JSON : %@", json);
+//            NSLog(@"JSON : %@", json);
+            
+            //Parse JSON to get a list of articles
+            if(!_articlesList){
+                _articlesList = [[NSArray alloc] init];
+            }
+            
+            _articlesList = [ArticlesParser sortedArticlesFromJson:json];
+            
+            for(int i = 0; i < [_articlesList count]; i++){
+                ArticleModel *article = (ArticleModel *)[_articlesList objectAtIndex:i];
+                NSLog(@"Article %ld - Date : %@", article.articleId, article.date);
+            }
         }
     }];
 }
