@@ -17,6 +17,7 @@
 @property (nonatomic, strong) NSDate *date;
 @property (nonatomic, strong) NSDate *editDate;
 @property (nonatomic, strong) NSDictionary *image;
+@property (nonatomic, strong) NSURL *imageUrl;
 @property (nonatomic, strong) NSString *keywords;
 @property (nonatomic, strong) NSString *section;
 @property long sectionId;

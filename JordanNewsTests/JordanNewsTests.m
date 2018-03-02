@@ -56,7 +56,7 @@
                                    @"image_copyright": @"Copyright",
                                    @"image_height": @2,
                                    @"image_title": @"Image title",
-                                   @"image_url": @"http://img.bfmtv.com/i/0/0/c0257/885abbd1f3fed5e927e3bfe0360.jpeg",
+                                   @"image_url": @"http://img_url.com/image.jpeg",
                                    @"image_width": @2
                                },
                                @"keywords": @"keyword1, keyword2",
@@ -92,6 +92,16 @@
     
     //Image
     XCTAssertTrue([article.image isEqual:jsonDict[@"image"]], @"Images are not equal");
+    
+    //Image URL
+    NSString *imgUrlString = jsonDict[@"image"][@"image_url"];
+    //Replace http:// by https://
+    if([imgUrlString hasPrefix:@"http://"]){
+        imgUrlString = [imgUrlString stringByReplacingOccurrencesOfString:@"http://" withString:@"https://"];
+    }
+    NSURL *imageUrl = [NSURL URLWithString:imgUrlString];
+    
+    XCTAssertTrue([article.imageUrl isEqual:imageUrl], @"Image URLs are not equal");
 }
 
 - (void)testPerformanceExample {

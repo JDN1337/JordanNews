@@ -18,7 +18,6 @@
         self.chapo = dict[@"chapo"];
         self.nbComments = [dict[@"comments"] intValue];
         self.content = dict[@"content"];
-        self.image = dict[@"image"];
         self.keywords = dict[@"keywords"];
         self.section = dict[@"section"];
         self.sectionId = [dict[@"section_id"] longValue];
@@ -30,6 +29,18 @@
         //Dates
         self.date = [NSDate dateWithTimeIntervalSince1970:[dict[@"date"] doubleValue]];
         self.editDate = [NSDate dateWithTimeIntervalSince1970:[dict[@"edit_date"] doubleValue]];
+        
+        //Image
+        self.image = dict[@"image"];
+        
+        //Image URL
+        NSString *imgUrlString = [self.image objectForKey:@"image_url"];
+        //App Transport Security has blocked a cleartext HTTP, replace it by https
+        if([imgUrlString hasPrefix:@"http://"]){
+            imgUrlString = [imgUrlString stringByReplacingOccurrencesOfString:@"http://" withString:@"https://"];
+        }
+        
+        self.imageUrl = [NSURL URLWithString:imgUrlString];
     }
     
     return self;
