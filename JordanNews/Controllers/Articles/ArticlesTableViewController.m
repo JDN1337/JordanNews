@@ -32,7 +32,7 @@
     
     // Initialize the refresh control.
     self.refreshControl = [[UIRefreshControl alloc] init];
-    self.refreshControl.backgroundColor = [UIColor primaryColorBlue];
+    self.refreshControl.backgroundColor = [UIColor secondaryColorBlue];
     self.refreshControl.tintColor = [UIColor whiteColor];
     [self.refreshControl addTarget:self
                             action:@selector(loadArticles)
