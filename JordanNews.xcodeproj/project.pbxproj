@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10BC818908A566478EA66AA4 /* libPods-JordanNewsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD95A30716F7129260DF47E /* libPods-JordanNewsTests.a */; };
 		5D872E4A2049495200A354A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D872E492049495200A354A3 /* AppDelegate.m */; };
 		5D872E4D2049495200A354A3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D872E4C2049495200A354A3 /* ViewController.m */; };
 		5D872E502049495200A354A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D872E4E2049495200A354A3 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 		5D872E582049495200A354A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D872E572049495200A354A3 /* main.m */; };
 		5D872E622049495200A354A3 /* JordanNewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D872E612049495200A354A3 /* JordanNewsTests.m */; };
 		5D872E6D2049495200A354A3 /* JordanNewsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D872E6C2049495200A354A3 /* JordanNewsUITests.m */; };
+		697BD009D0F6ACB8FF1F37F8 /* libPods-JordanNewsUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C14D1501E34D25E3DC73B29F /* libPods-JordanNewsUITests.a */; };
+		6C38E13F0F9FADF835B13B9B /* libPods-JordanNews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F40321CC2C2369CF21A34C /* libPods-JordanNews.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		108AAC24AAF894FC5DA92DEC /* Pods-JordanNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JordanNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-JordanNews/Pods-JordanNews.release.xcconfig"; sourceTree = "<group>"; };
+		5844EA3D94E048A179549DF8 /* Pods-JordanNewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JordanNewsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JordanNewsTests/Pods-JordanNewsTests.release.xcconfig"; sourceTree = "<group>"; };
 		5D872E452049495200A354A3 /* JordanNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JordanNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D872E482049495200A354A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5D872E492049495200A354A3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +56,13 @@
 		5D872E682049495200A354A3 /* JordanNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JordanNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D872E6C2049495200A354A3 /* JordanNewsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JordanNewsUITests.m; sourceTree = "<group>"; };
 		5D872E6E2049495200A354A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84134FE0B86881A7FFC2BEAA /* Pods-JordanNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JordanNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JordanNews/Pods-JordanNews.debug.xcconfig"; sourceTree = "<group>"; };
+		99F40321CC2C2369CF21A34C /* libPods-JordanNews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JordanNews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CA77D603B3300BA480D1BCC /* Pods-JordanNewsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JordanNewsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JordanNewsUITests/Pods-JordanNewsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B5EE779574C43ADC8A82E0B9 /* Pods-JordanNewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JordanNewsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JordanNewsTests/Pods-JordanNewsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C14D1501E34D25E3DC73B29F /* libPods-JordanNewsUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JordanNewsUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD6A1987D90EBD3B5336B05D /* Pods-JordanNewsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JordanNewsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JordanNewsUITests/Pods-JordanNewsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DDD95A30716F7129260DF47E /* libPods-JordanNewsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JordanNewsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C38E13F0F9FADF835B13B9B /* libPods-JordanNews.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10BC818908A566478EA66AA4 /* libPods-JordanNewsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +86,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				697BD009D0F6ACB8FF1F37F8 /* libPods-JordanNewsUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E117604B29E99027CC3A809 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99F40321CC2C2369CF21A34C /* libPods-JordanNews.a */,
+				DDD95A30716F7129260DF47E /* libPods-JordanNewsTests.a */,
+				C14D1501E34D25E3DC73B29F /* libPods-JordanNewsUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5D872E3C2049495200A354A3 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +110,8 @@
 				5D872E602049495200A354A3 /* JordanNewsTests */,
 				5D872E6B2049495200A354A3 /* JordanNewsUITests */,
 				5D872E462049495200A354A3 /* Products */,
+				D222D40E1FB5F724F002A13B /* Pods */,
+				3E117604B29E99027CC3A809 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +159,19 @@
 			path = JordanNewsUITests;
 			sourceTree = "<group>";
 		};
+		D222D40E1FB5F724F002A13B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84134FE0B86881A7FFC2BEAA /* Pods-JordanNews.debug.xcconfig */,
+				108AAC24AAF894FC5DA92DEC /* Pods-JordanNews.release.xcconfig */,
+				B5EE779574C43ADC8A82E0B9 /* Pods-JordanNewsTests.debug.xcconfig */,
+				5844EA3D94E048A179549DF8 /* Pods-JordanNewsTests.release.xcconfig */,
+				9CA77D603B3300BA480D1BCC /* Pods-JordanNewsUITests.debug.xcconfig */,
+				DD6A1987D90EBD3B5336B05D /* Pods-JordanNewsUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +179,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D872E712049495200A354A3 /* Build configuration list for PBXNativeTarget "JordanNews" */;
 			buildPhases = (
+				40F1C2B69E24A7FD5E912FA9 /* [CP] Check Pods Manifest.lock */,
 				5D872E412049495200A354A3 /* Sources */,
 				5D872E422049495200A354A3 /* Frameworks */,
 				5D872E432049495200A354A3 /* Resources */,
+				5AE32093D0EC8820C49F119F /* [CP] Embed Pods Frameworks */,
+				FF9CE4709A23280D668FB93F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -156,9 +199,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D872E742049495200A354A3 /* Build configuration list for PBXNativeTarget "JordanNewsTests" */;
 			buildPhases = (
+				1B070103AF96B1E0116EF5F5 /* [CP] Check Pods Manifest.lock */,
 				5D872E592049495200A354A3 /* Sources */,
 				5D872E5A2049495200A354A3 /* Frameworks */,
 				5D872E5B2049495200A354A3 /* Resources */,
+				44ABC1866297FD499383EE01 /* [CP] Embed Pods Frameworks */,
+				70ED542D8936AAC6F112B089 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -174,9 +220,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D872E772049495200A354A3 /* Build configuration list for PBXNativeTarget "JordanNewsUITests" */;
 			buildPhases = (
+				1429EEBBB8D558D3873B2543 /* [CP] Check Pods Manifest.lock */,
 				5D872E642049495200A354A3 /* Sources */,
 				5D872E652049495200A354A3 /* Frameworks */,
 				5D872E662049495200A354A3 /* Resources */,
+				9F9165CD23923329860F7220 /* [CP] Embed Pods Frameworks */,
+				19DFDCA41738217211A1E47C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -259,6 +308,153 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1429EEBBB8D558D3873B2543 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JordanNewsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		19DFDCA41738217211A1E47C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JordanNewsUITests/Pods-JordanNewsUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1B070103AF96B1E0116EF5F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JordanNewsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		40F1C2B69E24A7FD5E912FA9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JordanNews-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44ABC1866297FD499383EE01 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JordanNewsTests/Pods-JordanNewsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AE32093D0EC8820C49F119F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JordanNews/Pods-JordanNews-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70ED542D8936AAC6F112B089 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JordanNewsTests/Pods-JordanNewsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F9165CD23923329860F7220 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JordanNewsUITests/Pods-JordanNewsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF9CE4709A23280D668FB93F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JordanNews/Pods-JordanNews-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5D872E412049495200A354A3 /* Sources */ = {
@@ -428,6 +624,7 @@
 		};
 		5D872E722049495200A354A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84134FE0B86881A7FFC2BEAA /* Pods-JordanNews.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -442,6 +639,7 @@
 		};
 		5D872E732049495200A354A3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 108AAC24AAF894FC5DA92DEC /* Pods-JordanNews.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -456,6 +654,7 @@
 		};
 		5D872E752049495200A354A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5EE779574C43ADC8A82E0B9 /* Pods-JordanNewsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -471,6 +670,7 @@
 		};
 		5D872E762049495200A354A3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5844EA3D94E048A179549DF8 /* Pods-JordanNewsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -486,6 +686,7 @@
 		};
 		5D872E782049495200A354A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CA77D603B3300BA480D1BCC /* Pods-JordanNewsUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YDJUX2GJN8;
@@ -500,6 +701,7 @@
 		};
 		5D872E792049495200A354A3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD6A1987D90EBD3B5336B05D /* Pods-JordanNewsUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YDJUX2GJN8;
