@@ -11,10 +11,12 @@
 #import "ArticlesParser.h"
 #import "ArticleModel.h"
 #import "ArticleDetailViewController.h"
+#import "UIColor+Utilities.h"
 
 @interface ArticlesTableViewController ()
 
 @property (strong, nonatomic) NSArray* articlesList;
+@property BOOL isLoadingNews; //YES if loadArticles is in progress (used to avoid multiple requests)
 
 @end
 
@@ -23,6 +25,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _isLoadingNews = NO;
+    
+    // Initialize the refresh control.
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    self.refreshControl.backgroundColor = [UIColor primaryColorBlue];
+    self.refreshControl.tintColor = [UIColor whiteColor];
+    [self.refreshControl addTarget:self
+                            action:@selector(loadArticles)
+                  forControlEvents:UIControlEventValueChanged];
+    
+    //Programmatically pull to refresh
+    [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^(void){
+        self.tableView.contentOffset = CGPointMake(0, -self.refreshControl.frame.size.height);
+    } completion:^(BOOL finished) {
+        [self.refreshControl beginRefreshing];
+    }];
+    
+    //Load datas
     [self loadArticles];
 }
 
@@ -37,7 +57,30 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [_articlesList count];
+    if([_articlesList count] > 0){
+        self.tableView.backgroundView = nil;
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        
+        return [_articlesList count];
+    }
+    else{
+        if(!_isLoadingNews){
+            // Display a message when the table is empty
+            UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+            
+            messageLabel.text = @"Aucune actualité disponible.\nVeuillez glisser vers le bas pour rafraîchir.";
+            messageLabel.textColor = [UIColor blackColor];
+            messageLabel.numberOfLines = 0;
+            messageLabel.textAlignment = NSTextAlignmentCenter;
+            messageLabel.font = [UIFont fontWithName:@"Palatino-Italic" size:20];
+            [messageLabel sizeToFit];
+            
+            self.tableView.backgroundView = messageLabel;
+            self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        }
+        
+        return 0;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -65,30 +108,49 @@
 
 #pragma mark - API Management
 - (void) loadArticles{
-    //Get articles
-    [[ApiManager sharedInstance] getArticlesWithCompletionBlock:^(NSError *error, NSArray *json) {
-        if(error) {
-            NSLog(@"Error: %@", error);
-            
-            //Show error alert
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Oups :(" message:@"Une erreur s'est produite ! Veuillez réessayez plus tard."preferredStyle:UIAlertControllerStyleAlert];
-            [alertController addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
-            }]];
-            [self presentViewController:alertController animated:YES completion:nil];
-        }
-        else{
-//            NSLog(@"JSON : %@", json);
-            
-            if(!_articlesList){
-                _articlesList = [[NSArray alloc] init];
+    //Avoid multiple loading
+    if(!_isLoadingNews){
+        _isLoadingNews = YES;
+        
+        //Get articles
+        [[ApiManager sharedInstance] getArticlesWithCompletionBlock:^(NSError *error, NSArray *json) {
+            if(error) {
+                NSLog(@"Error: %@", error);
+                
+                //Show error alert
+                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Oups :(" message:@"Une erreur s'est produite ! Veuillez réessayez plus tard."preferredStyle:UIAlertControllerStyleAlert];
+                [alertController addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+                }]];
+                [self presentViewController:alertController animated:YES completion:nil];
+            }
+            else{
+    //            NSLog(@"JSON : %@", json);
+                
+                if(!_articlesList){
+                    _articlesList = [[NSArray alloc] init];
+                }
+                
+                //Parse JSON to get a list of articles
+                _articlesList = [ArticlesParser sortedArticlesFromJson:json];
             }
             
-            //Parse JSON to get a list of articles
-            _articlesList = [ArticlesParser sortedArticlesFromJson:json];
-        }
-        
-        [self.tableView reloadData];
-    }];
+            // End the refreshing
+            if (self.refreshControl) {
+                NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+                [formatter setDateFormat:@"MMM d, HH:mm"];
+                NSString *title = [NSString stringWithFormat:@"Dernière mise à jour : %@", [formatter stringFromDate:[NSDate date]]];
+                NSDictionary *attrsDictionary = [NSDictionary dictionaryWithObject:[UIColor whiteColor]
+                                                                            forKey:NSForegroundColorAttributeName];
+                NSAttributedString *attributedTitle = [[NSAttributedString alloc] initWithString:title attributes:attrsDictionary];
+                self.refreshControl.attributedTitle = attributedTitle;
+                
+                [self.refreshControl endRefreshing];
+            }
+            
+            _isLoadingNews = NO;
+            [self.tableView reloadData];
+        }];
+    }
 }
 
 @end
