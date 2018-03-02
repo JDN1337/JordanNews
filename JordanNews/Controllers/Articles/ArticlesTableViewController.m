@@ -12,6 +12,9 @@
 #import "ArticleModel.h"
 #import "ArticleDetailViewController.h"
 #import "UIColor+Utilities.h"
+#import "ArticleTableViewCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "NSDate+Utilities.h"
 
 @interface ArticlesTableViewController ()
 
@@ -52,6 +55,10 @@
 
 #pragma mark - Table view data source
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 120.0f;
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -84,11 +91,25 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"articleCell" forIndexPath:indexPath];
+    ArticleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"articleCell" forIndexPath:indexPath];
     
     ArticleModel *article = [_articlesList objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = article.title;
+#warning TODO display spinner while loading
+#warning TODO resize if failed
+    [cell.articleImageView sd_setImageWithURL:article.imageUrl];
+    
+    cell.sectionLabel.text = article.section;
+    cell.titleLabel.text = article.title;
+    
+    //Date
+    NSString *dateStr = [article.date stringFromDatewithFormatter:@"dd/MM/yyyy"];
+    if(dateStr && ![dateStr isEqualToString:@""]){
+        cell.dateLabel.text = [NSString stringWithFormat:@"Le %@", dateStr];
+    }
+    else{
+        cell.dateLabel.text = @"";
+    }
     
     return cell;
 }
