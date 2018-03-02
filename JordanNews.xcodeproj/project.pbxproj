@@ -16,6 +16,7 @@
 		5D872E582049495200A354A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D872E572049495200A354A3 /* main.m */; };
 		5D872E622049495200A354A3 /* JordanNewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D872E612049495200A354A3 /* JordanNewsTests.m */; };
 		5D872E6D2049495200A354A3 /* JordanNewsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D872E6C2049495200A354A3 /* JordanNewsUITests.m */; };
+		5D872E7D20494A7600A354A3 /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D872E7C20494A7600A354A3 /* ApiManager.m */; };
 		697BD009D0F6ACB8FF1F37F8 /* libPods-JordanNewsUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C14D1501E34D25E3DC73B29F /* libPods-JordanNewsUITests.a */; };
 		6C38E13F0F9FADF835B13B9B /* libPods-JordanNews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F40321CC2C2369CF21A34C /* libPods-JordanNews.a */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,8 @@
 		5D872E682049495200A354A3 /* JordanNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JordanNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D872E6C2049495200A354A3 /* JordanNewsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JordanNewsUITests.m; sourceTree = "<group>"; };
 		5D872E6E2049495200A354A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D872E7B20494A7600A354A3 /* ApiManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiManager.h; sourceTree = "<group>"; };
+		5D872E7C20494A7600A354A3 /* ApiManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiManager.m; sourceTree = "<group>"; };
 		84134FE0B86881A7FFC2BEAA /* Pods-JordanNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JordanNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JordanNews/Pods-JordanNews.debug.xcconfig"; sourceTree = "<group>"; };
 		99F40321CC2C2369CF21A34C /* libPods-JordanNews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JordanNews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CA77D603B3300BA480D1BCC /* Pods-JordanNewsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JordanNewsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JordanNewsUITests/Pods-JordanNewsUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +131,7 @@
 		5D872E472049495200A354A3 /* JordanNews */ = {
 			isa = PBXGroup;
 			children = (
+				5D872E7A20494A5700A354A3 /* Managers */,
 				5D872E482049495200A354A3 /* AppDelegate.h */,
 				5D872E492049495200A354A3 /* AppDelegate.m */,
 				5D872E4B2049495200A354A3 /* ViewController.h */,
@@ -157,6 +161,15 @@
 				5D872E6E2049495200A354A3 /* Info.plist */,
 			);
 			path = JordanNewsUITests;
+			sourceTree = "<group>";
+		};
+		5D872E7A20494A5700A354A3 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				5D872E7B20494A7600A354A3 /* ApiManager.h */,
+				5D872E7C20494A7600A354A3 /* ApiManager.m */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		D222D40E1FB5F724F002A13B /* Pods */ = {
@@ -461,6 +474,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D872E7D20494A7600A354A3 /* ApiManager.m in Sources */,
 				5D872E4D2049495200A354A3 /* ViewController.m in Sources */,
 				5D872E582049495200A354A3 /* main.m in Sources */,
 				5D872E4A2049495200A354A3 /* AppDelegate.m in Sources */,

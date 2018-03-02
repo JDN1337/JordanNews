@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ApiManager.h"
 
 @interface ViewController ()
 
@@ -16,13 +17,33 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [self loadArticles];
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+}
+
+#pragma mark - API Management
+- (void) loadArticles{
+    //Get articles
+    [[ApiManager sharedInstance] getArticlesWithCompletionBlock:^(NSError *error, NSArray *json) {
+        if(error) {
+            NSLog(@"Error: %@", error);
+                
+            //Show error alert
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Oups :(" message:@"Une erreur s'est produite ! Veuillez réessayez plus tard."preferredStyle:UIAlertControllerStyleAlert];
+            [alertController addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+            }]];
+            [self presentViewController:alertController animated:YES completion:nil];
+        }
+        else{
+            NSLog(@"JSON : %@", json);
+        }
+    }];
 }
 
 

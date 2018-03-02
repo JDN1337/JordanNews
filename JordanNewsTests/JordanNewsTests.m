@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "ApiManager.h"
 
 @interface JordanNewsTests : XCTestCase
 
@@ -24,9 +25,21 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testGetArticles {
+    XCTestExpectation *expectation = [self expectationWithDescription:@"GET Articles"];
+    
+    [[ApiManager sharedInstance] getArticlesWithCompletionBlock:^(NSError *error, NSArray *json) {
+        // Make sure we downloaded some data.
+        XCTAssertNotNil(json, "No data was downloaded.");
+        
+        [expectation fulfill];
+    }];
+    
+    [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@", error);
+        }
+    }];
 }
 
 - (void)testPerformanceExample {
