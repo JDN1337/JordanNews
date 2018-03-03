@@ -39,6 +39,7 @@
                   forControlEvents:UIControlEventValueChanged];
     
     //Programmatically pull to refresh
+#warning TODO FIX
     [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^(void){
         self.tableView.contentOffset = CGPointMake(0, -self.refreshControl.frame.size.height);
     } completion:^(BOOL finished) {
