@@ -14,6 +14,7 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *articleImageView;
 @property (strong, nonatomic) IBOutlet UILabel *articleTitleLabel;
+@property (strong, nonatomic) IBOutlet UILabel *articleChapoLabel;
 @property (strong, nonatomic) IBOutlet UILabel *articleContentLabel;
 @property (strong, nonatomic) IBOutlet UILabel *articleDatesLabel;
 
@@ -25,13 +26,14 @@
     [super viewDidLoad];
     
     if(self.article){
-        if(self.article.title){
-            _articleTitleLabel.text = self.article.title;
-        }
+        //Title
+        _articleTitleLabel.text = (self.article.title ? self.article.title : @"");
         
-        if(self.article.content){
-            _articleContentLabel.text = self.article.content;
-        }
+        //Chapo
+        _articleChapoLabel.text = (self.article.chapo ? self.article.chapo : @"");
+        
+        //Content
+        _articleContentLabel.text = (self.article.content ? self.article.content : @"");
         
         //Date
         _articleDatesLabel.text = @"";
@@ -49,7 +51,7 @@
             }
         }
         
-#warning TODO display spinner while loading
+#warning TODO display spinner while loading + hide gradient black
 #warning TODO resize if failed
         [_articleImageView sd_setImageWithURL:self.article.imageUrl];
     }

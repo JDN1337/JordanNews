@@ -96,7 +96,7 @@
     
     ArticleModel *article = [_articlesList objectAtIndex:indexPath.row];
     
-#warning TODO display spinner while loading
+#warning TODO display spinner while loading + hide gradient black
 #warning TODO resize if failed
     [cell.articleImageView sd_setImageWithURL:article.imageUrl];
     

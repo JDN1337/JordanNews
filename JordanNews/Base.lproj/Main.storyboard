@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -123,10 +124,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qZX-La-Z0S">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="318.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="354"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdo-cb-7WN">
-                                                <rect key="frame" x="20" y="279.5" width="335" height="19"/>
+                                                <rect key="frame" x="20" y="315" width="335" height="19"/>
                                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -162,21 +163,30 @@ Edit date</string>
                                                     <constraint firstAttribute="height" constant="2" id="rHy-J9-7ps"/>
                                                 </constraints>
                                             </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPy-r4-BfL">
+                                                <rect key="frame" x="20" y="284.5" width="335" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="Mdo-cb-7WN" secondAttribute="trailing" constant="20" id="4a2-fh-TOe"/>
                                             <constraint firstItem="Chp-y7-7bS" firstAttribute="top" secondItem="rT9-3r-tsh" secondAttribute="bottom" constant="10" id="CUB-VZ-TiZ"/>
+                                            <constraint firstItem="Mdo-cb-7WN" firstAttribute="top" secondItem="bPy-r4-BfL" secondAttribute="bottom" constant="10" id="Cci-y9-9ij"/>
+                                            <constraint firstItem="bPy-r4-BfL" firstAttribute="leading" secondItem="qZX-La-Z0S" secondAttribute="leading" constant="20" id="Dkt-Cv-MB0"/>
                                             <constraint firstAttribute="trailing" secondItem="rT9-3r-tsh" secondAttribute="trailing" constant="20" id="I8C-KX-k7v"/>
                                             <constraint firstItem="rT9-3r-tsh" firstAttribute="leading" secondItem="qZX-La-Z0S" secondAttribute="leading" constant="20" id="PaT-RI-IvY"/>
                                             <constraint firstItem="l1z-Pu-F73" firstAttribute="trailing" secondItem="eB6-Or-Ec7" secondAttribute="trailing" constant="-10" id="S0X-Ap-Mg9"/>
+                                            <constraint firstItem="bPy-r4-BfL" firstAttribute="top" secondItem="Chp-y7-7bS" secondAttribute="bottom" constant="20" id="TSW-of-s4Z"/>
                                             <constraint firstItem="Chp-y7-7bS" firstAttribute="centerX" secondItem="qZX-La-Z0S" secondAttribute="centerX" id="VLB-8k-z7b"/>
                                             <constraint firstItem="l1z-Pu-F73" firstAttribute="bottom" secondItem="eB6-Or-Ec7" secondAttribute="bottom" constant="-10" id="XpT-pT-fpe"/>
                                             <constraint firstItem="FwN-fa-hss" firstAttribute="bottom" secondItem="eB6-Or-Ec7" secondAttribute="bottom" id="Yab-HH-fgd"/>
                                             <constraint firstItem="Mdo-cb-7WN" firstAttribute="leading" secondItem="qZX-La-Z0S" secondAttribute="leading" constant="20" id="b39-CO-arg"/>
                                             <constraint firstAttribute="trailing" secondItem="eB6-Or-Ec7" secondAttribute="trailing" id="b8S-qY-RNR"/>
-                                            <constraint firstItem="Mdo-cb-7WN" firstAttribute="top" secondItem="Chp-y7-7bS" secondAttribute="bottom" constant="15" id="bZS-Jg-qzJ"/>
                                             <constraint firstItem="l1z-Pu-F73" firstAttribute="leading" secondItem="eB6-Or-Ec7" secondAttribute="leading" constant="10" id="f0P-SM-rH4"/>
+                                            <constraint firstAttribute="trailing" secondItem="bPy-r4-BfL" secondAttribute="trailing" constant="20" id="gjr-dT-VI4"/>
                                             <constraint firstItem="FwN-fa-hss" firstAttribute="leading" secondItem="eB6-Or-Ec7" secondAttribute="leading" id="hdt-yk-0WC"/>
                                             <constraint firstItem="FwN-fa-hss" firstAttribute="trailing" secondItem="eB6-Or-Ec7" secondAttribute="trailing" id="hq3-hM-mKq"/>
                                             <constraint firstItem="rT9-3r-tsh" firstAttribute="top" secondItem="eB6-Or-Ec7" secondAttribute="bottom" constant="20" id="jXq-UP-q0e"/>
@@ -205,6 +215,7 @@ Edit date</string>
                         <viewLayoutGuide key="safeArea" id="IPw-uS-eR5"/>
                     </view>
                     <connections>
+                        <outlet property="articleChapoLabel" destination="bPy-r4-BfL" id="tK1-De-Lw8"/>
                         <outlet property="articleContentLabel" destination="Mdo-cb-7WN" id="K93-u8-8Sa"/>
                         <outlet property="articleDatesLabel" destination="l1z-Pu-F73" id="IgH-X5-Hmu"/>
                         <outlet property="articleImageView" destination="eB6-Or-Ec7" id="M4p-g1-J6c"/>
