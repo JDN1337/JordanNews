@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,6 +17,9 @@
         </array>
         <array key="ArialBold.ttf">
             <string>Arial-BoldMT</string>
+        </array>
+        <array key="ArialBoldItalic.ttf">
+            <string>Arial-BoldItalicMT</string>
         </array>
         <array key="ArialItalic.ttf">
             <string>Arial-ItalicMT</string>
@@ -124,10 +128,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qZX-La-Z0S">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="354"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="382.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdo-cb-7WN">
-                                                <rect key="frame" x="20" y="315" width="335" height="19"/>
+                                                <rect key="frame" x="15" y="343.5" width="345" height="19"/>
                                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -139,8 +143,8 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rT9-3r-tsh">
-                                                <rect key="frame" x="20" y="231" width="335" height="21.5"/>
-                                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="19"/>
+                                                <rect key="frame" x="15" y="236" width="345" height="25"/>
+                                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -148,7 +152,7 @@
                                                 <rect key="frame" x="0.0" y="53" width="375" height="158"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1z-Pu-F73">
-                                                <rect key="frame" x="10" y="174" width="355" height="27"/>
+                                                <rect key="frame" x="187.5" y="174" width="177.5" height="27"/>
                                                 <string key="text">Date
 Edit date</string>
                                                 <fontDescription key="fontDescription" name="Arial-ItalicMT" family="Arial" pointSize="12"/>
@@ -156,7 +160,7 @@ Edit date</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Chp-y7-7bS">
-                                                <rect key="frame" x="137.5" y="262.5" width="100" height="2"/>
+                                                <rect key="frame" x="137.5" y="271" width="100" height="2"/>
                                                 <color key="backgroundColor" red="0.98823529409999999" green="0.52156862749999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="7JH-ru-MQG"/>
@@ -164,7 +168,7 @@ Edit date</string>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPy-r4-BfL">
-                                                <rect key="frame" x="20" y="284.5" width="335" height="20.5"/>
+                                                <rect key="frame" x="15" y="298" width="345" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -173,30 +177,40 @@ Edit date</string>
                                                 <rect key="frame" x="169" y="87.5" width="37" height="37"/>
                                                 <color key="color" red="0.98823529409999999" green="0.52156862749999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             </activityIndicatorView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQL-uv-csf">
+                                                <rect key="frame" x="20" y="186" width="167.5" height="15"/>
+                                                <fontDescription key="fontDescription" name="Arial-BoldItalicMT" family="Arial" pointSize="13"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="Mdo-cb-7WN" secondAttribute="trailing" constant="20" id="4a2-fh-TOe"/>
+                                            <constraint firstItem="l1z-Pu-F73" firstAttribute="trailing" secondItem="eB6-Or-Ec7" secondAttribute="trailing" constant="-10" id="3D1-xu-c84"/>
+                                            <constraint firstAttribute="trailing" secondItem="Mdo-cb-7WN" secondAttribute="trailing" constant="15" id="4a2-fh-TOe"/>
                                             <constraint firstItem="Chp-y7-7bS" firstAttribute="top" secondItem="rT9-3r-tsh" secondAttribute="bottom" constant="10" id="CUB-VZ-TiZ"/>
-                                            <constraint firstItem="Mdo-cb-7WN" firstAttribute="top" secondItem="bPy-r4-BfL" secondAttribute="bottom" constant="10" id="Cci-y9-9ij"/>
-                                            <constraint firstItem="bPy-r4-BfL" firstAttribute="leading" secondItem="qZX-La-Z0S" secondAttribute="leading" constant="20" id="Dkt-Cv-MB0"/>
-                                            <constraint firstAttribute="trailing" secondItem="rT9-3r-tsh" secondAttribute="trailing" constant="20" id="I8C-KX-k7v"/>
-                                            <constraint firstItem="rT9-3r-tsh" firstAttribute="leading" secondItem="qZX-La-Z0S" secondAttribute="leading" constant="20" id="PaT-RI-IvY"/>
-                                            <constraint firstItem="l1z-Pu-F73" firstAttribute="trailing" secondItem="eB6-Or-Ec7" secondAttribute="trailing" constant="-10" id="S0X-Ap-Mg9"/>
-                                            <constraint firstItem="bPy-r4-BfL" firstAttribute="top" secondItem="Chp-y7-7bS" secondAttribute="bottom" constant="20" id="TSW-of-s4Z"/>
+                                            <constraint firstItem="Mdo-cb-7WN" firstAttribute="top" secondItem="bPy-r4-BfL" secondAttribute="bottom" constant="25" id="Cci-y9-9ij"/>
+                                            <constraint firstItem="bPy-r4-BfL" firstAttribute="leading" secondItem="qZX-La-Z0S" secondAttribute="leading" constant="15" id="Dkt-Cv-MB0"/>
+                                            <constraint firstAttribute="trailing" secondItem="rT9-3r-tsh" secondAttribute="trailing" constant="15" id="I8C-KX-k7v"/>
+                                            <constraint firstItem="OQL-uv-csf" firstAttribute="leading" secondItem="eB6-Or-Ec7" secondAttribute="leading" constant="20" id="KJl-U1-crp"/>
+                                            <constraint firstItem="rT9-3r-tsh" firstAttribute="leading" secondItem="qZX-La-Z0S" secondAttribute="leading" constant="15" id="PaT-RI-IvY"/>
+                                            <constraint firstItem="bPy-r4-BfL" firstAttribute="top" secondItem="Chp-y7-7bS" secondAttribute="bottom" constant="25" id="TSW-of-s4Z"/>
                                             <constraint firstItem="8nw-Ht-eA3" firstAttribute="centerX" secondItem="eB6-Or-Ec7" secondAttribute="centerX" id="TY8-xT-QPP"/>
                                             <constraint firstItem="Chp-y7-7bS" firstAttribute="centerX" secondItem="qZX-La-Z0S" secondAttribute="centerX" id="VLB-8k-z7b"/>
                                             <constraint firstItem="l1z-Pu-F73" firstAttribute="bottom" secondItem="eB6-Or-Ec7" secondAttribute="bottom" constant="-10" id="XpT-pT-fpe"/>
                                             <constraint firstItem="FwN-fa-hss" firstAttribute="bottom" secondItem="eB6-Or-Ec7" secondAttribute="bottom" id="Yab-HH-fgd"/>
-                                            <constraint firstItem="Mdo-cb-7WN" firstAttribute="leading" secondItem="qZX-La-Z0S" secondAttribute="leading" constant="20" id="b39-CO-arg"/>
+                                            <constraint firstItem="Mdo-cb-7WN" firstAttribute="leading" secondItem="qZX-La-Z0S" secondAttribute="leading" constant="15" id="b39-CO-arg"/>
                                             <constraint firstAttribute="trailing" secondItem="eB6-Or-Ec7" secondAttribute="trailing" id="b8S-qY-RNR"/>
-                                            <constraint firstItem="l1z-Pu-F73" firstAttribute="leading" secondItem="eB6-Or-Ec7" secondAttribute="leading" constant="10" id="f0P-SM-rH4"/>
+                                            <constraint firstItem="OQL-uv-csf" firstAttribute="width" secondItem="eB6-Or-Ec7" secondAttribute="width" multiplier="1:2" constant="-20" id="bdA-0M-yUd"/>
+                                            <constraint firstItem="l1z-Pu-F73" firstAttribute="width" secondItem="eB6-Or-Ec7" secondAttribute="width" multiplier="1:2" constant="-10" id="cyN-VE-0mg"/>
+                                            <constraint firstItem="l1z-Pu-F73" firstAttribute="leading" secondItem="OQL-uv-csf" secondAttribute="trailing" id="feE-Mv-WVA"/>
                                             <constraint firstItem="8nw-Ht-eA3" firstAttribute="centerY" secondItem="eB6-Or-Ec7" secondAttribute="centerY" id="fzo-iL-gdi"/>
-                                            <constraint firstAttribute="trailing" secondItem="bPy-r4-BfL" secondAttribute="trailing" constant="20" id="gjr-dT-VI4"/>
+                                            <constraint firstAttribute="trailing" secondItem="bPy-r4-BfL" secondAttribute="trailing" constant="15" id="gjr-dT-VI4"/>
                                             <constraint firstItem="FwN-fa-hss" firstAttribute="leading" secondItem="eB6-Or-Ec7" secondAttribute="leading" id="hdt-yk-0WC"/>
                                             <constraint firstItem="FwN-fa-hss" firstAttribute="trailing" secondItem="eB6-Or-Ec7" secondAttribute="trailing" id="hq3-hM-mKq"/>
-                                            <constraint firstItem="rT9-3r-tsh" firstAttribute="top" secondItem="eB6-Or-Ec7" secondAttribute="bottom" constant="20" id="jXq-UP-q0e"/>
+                                            <constraint firstItem="rT9-3r-tsh" firstAttribute="top" secondItem="eB6-Or-Ec7" secondAttribute="bottom" constant="25" id="jXq-UP-q0e"/>
                                             <constraint firstItem="eB6-Or-Ec7" firstAttribute="leading" secondItem="qZX-La-Z0S" secondAttribute="leading" id="mLV-Wo-wdP"/>
+                                            <constraint firstItem="OQL-uv-csf" firstAttribute="bottom" secondItem="eB6-Or-Ec7" secondAttribute="bottom" constant="-10" id="ptw-xD-ArL"/>
                                             <constraint firstAttribute="bottom" secondItem="Mdo-cb-7WN" secondAttribute="bottom" constant="20" id="vio-TD-Zke"/>
                                             <constraint firstItem="eB6-Or-Ec7" firstAttribute="top" secondItem="qZX-La-Z0S" secondAttribute="top" id="vqp-nk-Hab"/>
                                         </constraints>
@@ -227,6 +241,7 @@ Edit date</string>
                         <outlet property="articleImageGradient" destination="FwN-fa-hss" id="Tis-0Y-LbR"/>
                         <outlet property="articleImageView" destination="eB6-Or-Ec7" id="M4p-g1-J6c"/>
                         <outlet property="articleImageViewAspectConstraint" destination="e9R-NI-sQ9" id="LfL-qn-jzU"/>
+                        <outlet property="articleSectionLabel" destination="OQL-uv-csf" id="Gak-Ht-ay6"/>
                         <outlet property="articleTitleLabel" destination="rT9-3r-tsh" id="AKF-cc-Eha"/>
                         <outlet property="imageLoadingIndicator" destination="8nw-Ht-eA3" id="kbn-Lg-asn"/>
                     </connections>

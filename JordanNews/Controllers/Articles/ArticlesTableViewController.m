@@ -39,7 +39,7 @@
                             action:@selector(loadArticles)
                   forControlEvents:UIControlEventValueChanged];
     
-    //Programmatically pull to refresh
+    //Programmatically pull to refresh to indicate first loading
 #warning TODO FIX
     [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^(void){
         self.tableView.contentOffset = CGPointMake(0, -self.refreshControl.frame.size.height);

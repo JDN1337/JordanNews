@@ -18,8 +18,8 @@
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *articleImageViewAspectConstraint;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *imageLoadingIndicator;
 
-
 @property (strong, nonatomic) IBOutlet UILabel *articleTitleLabel;
+@property (strong, nonatomic) IBOutlet UILabel *articleSectionLabel;
 @property (strong, nonatomic) IBOutlet UILabel *articleChapoLabel;
 @property (strong, nonatomic) IBOutlet UILabel *articleContentLabel;
 @property (strong, nonatomic) IBOutlet UILabel *articleDatesLabel;
@@ -34,6 +34,9 @@
     if(self.article){
         //Title
         _articleTitleLabel.text = (self.article.title ? self.article.title : @"");
+        
+        //Section
+        _articleSectionLabel.text = (self.article.section ? self.article.section : @"");
         
         //Chapo
         _articleChapoLabel.text = (self.article.chapo ? self.article.chapo : @"");
