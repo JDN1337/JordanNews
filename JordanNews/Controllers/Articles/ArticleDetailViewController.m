@@ -9,10 +9,16 @@
 #import "ArticleDetailViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "NSDate+Utilities.h"
+#import "NSLayoutConstraint+Utilities.h"
 
 @interface ArticleDetailViewController ()
 
 @property (strong, nonatomic) IBOutlet UIImageView *articleImageView;
+@property (strong, nonatomic) IBOutlet UIImageView *articleImageGradient;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *articleImageViewAspectConstraint;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *imageLoadingIndicator;
+
+
 @property (strong, nonatomic) IBOutlet UILabel *articleTitleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *articleChapoLabel;
 @property (strong, nonatomic) IBOutlet UILabel *articleContentLabel;
@@ -51,9 +57,37 @@
             }
         }
         
-#warning TODO display spinner while loading + hide gradient black
-#warning TODO resize if failed
-        [_articleImageView sd_setImageWithURL:self.article.imageUrl];
+        //Hide imageView + hide gradient black + show spinner while loading image
+        [self.articleImageView setHidden:YES];
+        [self.articleImageGradient setHidden:YES];
+        [self.imageLoadingIndicator setHidden:NO];
+        
+        //Load image
+        [[SDWebImageManager sharedManager] loadImageWithURL:self.article.imageUrl options:0 progress:nil completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
+            
+            [self.imageLoadingIndicator setHidden:YES];
+            
+            //If success
+            if(image){
+                self.articleImageView.image = image;
+                [self.articleImageView setHidden:NO];
+                [self.articleImageGradient setHidden:NO];
+                
+                //Resize image to 16:9
+//                [NSLayoutConstraint updateAspectRatioConstraint:self.articleImageViewAspectConstraint withMultiplier:16.0/9.0 fromView:self.articleImageView];
+                [self.articleImageViewAspectConstraint setActive:YES];
+            }
+            //If failed
+            else{
+                self.articleImageView.image = nil;
+                [self.articleImageView setHidden:YES];
+                [self.articleImageGradient setHidden:YES];
+                
+                //Resize image to 0:0
+//                [NSLayoutConstraint updateAspectRatioConstraint:self.articleImageViewAspectConstraint withMultiplier:0.0 fromView:self.articleImageView];
+                [self.articleImageViewAspectConstraint setActive:NO];
+            }
+        }];
     }
 }
 

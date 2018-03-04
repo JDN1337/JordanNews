@@ -15,6 +15,7 @@
 #import "ArticleTableViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "NSDate+Utilities.h"
+#import "NSLayoutConstraint+Utilities.h"
 
 @interface ArticlesTableViewController ()
 
@@ -96,9 +97,33 @@
     
     ArticleModel *article = [_articlesList objectAtIndex:indexPath.row];
     
-#warning TODO display spinner while loading + hide gradient black
-#warning TODO resize if failed
-    [cell.articleImageView sd_setImageWithURL:article.imageUrl];
+    //Hide imageView + show spinner while loading image
+    [cell.articleImageView setHidden:YES];
+    [cell.imageLoadingIndicator setHidden:NO];
+    
+    //Load image
+    [[SDWebImageManager sharedManager] loadImageWithURL:article.imageUrl options:0 progress:nil completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
+        
+        [cell.imageLoadingIndicator setHidden:YES];
+        
+        //If success
+        if(image){
+            cell.articleImageView.image = image;
+            [cell.articleImageView setHidden:NO];
+            
+            //Resize image to 16:9
+            [NSLayoutConstraint updateAspectRatioConstraint:cell.articleImageViewAspectConstraint withMultiplier:16.0/9.0 fromView:cell.articleImageView];
+        }
+        //If failed
+        else{
+            cell.articleImageView.image = nil;
+            [cell.articleImageView setHidden:YES];
+            
+            //Resize image to 0:0
+            [NSLayoutConstraint updateAspectRatioConstraint:cell.articleImageViewAspectConstraint withMultiplier:0.0 fromView:cell.articleImageView];
+        }
+    }];
+    
     
     cell.sectionLabel.text = article.section;
     cell.titleLabel.text = article.title;
@@ -114,7 +139,6 @@
     
     return cell;
 }
-
 
 #pragma mark - Navigation
 

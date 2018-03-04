@@ -10,6 +10,9 @@
 
 @interface ArticleTableViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UIImageView *articleImageView;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *articleImageViewAspectConstraint;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *imageLoadingIndicator;
+
 @property (strong, nonatomic) IBOutlet UILabel *sectionLabel;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *dateLabel;

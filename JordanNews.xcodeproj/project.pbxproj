@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		10BC818908A566478EA66AA4 /* libPods-JordanNewsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD95A30716F7129260DF47E /* libPods-JordanNewsTests.a */; };
 		5D394B7120499508008F1023 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D394B7020499508008F1023 /* NSDate+Utilities.m */; };
+		5D394B74204C7B84008F1023 /* NSLayoutConstraint+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D394B73204C7B84008F1023 /* NSLayoutConstraint+Utilities.m */; };
 		5D872E4A2049495200A354A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D872E492049495200A354A3 /* AppDelegate.m */; };
 		5D872E502049495200A354A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D872E4E2049495200A354A3 /* Main.storyboard */; };
 		5D872E522049495200A354A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D872E512049495200A354A3 /* Assets.xcassets */; };
@@ -49,6 +50,8 @@
 		5844EA3D94E048A179549DF8 /* Pods-JordanNewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JordanNewsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JordanNewsTests/Pods-JordanNewsTests.release.xcconfig"; sourceTree = "<group>"; };
 		5D394B6F20499508008F1023 /* NSDate+Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
 		5D394B7020499508008F1023 /* NSDate+Utilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
+		5D394B72204C7B84008F1023 /* NSLayoutConstraint+Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+Utilities.h"; sourceTree = "<group>"; };
+		5D394B73204C7B84008F1023 /* NSLayoutConstraint+Utilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+Utilities.m"; sourceTree = "<group>"; };
 		5D872E452049495200A354A3 /* JordanNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JordanNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D872E482049495200A354A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5D872E492049495200A354A3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -237,6 +240,8 @@
 				5D872E9120497BE800A354A3 /* UIColor+Utilities.m */,
 				5D394B6F20499508008F1023 /* NSDate+Utilities.h */,
 				5D394B7020499508008F1023 /* NSDate+Utilities.m */,
+				5D394B72204C7B84008F1023 /* NSLayoutConstraint+Utilities.h */,
+				5D394B73204C7B84008F1023 /* NSLayoutConstraint+Utilities.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -568,6 +573,7 @@
 				5D872E582049495200A354A3 /* main.m in Sources */,
 				5D872E812049502600A354A3 /* ArticlesParser.m in Sources */,
 				5D872E972049877F00A354A3 /* ArticleTableViewCell.m in Sources */,
+				5D394B74204C7B84008F1023 /* NSLayoutConstraint+Utilities.m in Sources */,
 				5D872E4A2049495200A354A3 /* AppDelegate.m in Sources */,
 				5D394B7120499508008F1023 /* NSDate+Utilities.m in Sources */,
 			);
