@@ -10,7 +10,8 @@
 #import "ApiManager.h"
 #import "ArticlesParser.h"
 #import "ArticleModel.h"
-#import "ArticleDetailViewController.h"
+//#import "ArticleDetailViewController.h"
+#import "JordanNews-Swift.h"
 #import "UIColor+Utilities.h"
 #import "ArticleTableViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
@@ -129,7 +130,7 @@
     cell.titleLabel.text = article.title;
     
     //Date
-    NSString *dateStr = [article.date stringFromDatewithFormatter:@"dd/MM/yyyy"];
+    NSString *dateStr = [article.date stringFromDateWithFormatter:@"dd/MM/yyyy"];
     if(dateStr && ![dateStr isEqualToString:@""]){
         cell.dateLabel.text = [NSString stringWithFormat:@"Le %@", dateStr];
     }

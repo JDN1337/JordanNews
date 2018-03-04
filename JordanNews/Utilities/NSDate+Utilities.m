@@ -22,7 +22,7 @@
     return [formatter dateFromString:stringDate];
 }
 
-- (NSString *) stringFromDatewithFormatter:(NSString *)stringFormatter{
+- (NSString *) stringFromDateWithFormatter:(NSString *)stringFormatter{
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:stringFormatter];

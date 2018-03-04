@@ -119,7 +119,7 @@
         <!--Article Detail View Controller-->
         <scene sceneID="xC5-gU-QxL">
             <objects>
-                <viewController id="TAH-Q7-x0k" customClass="ArticleDetailViewController" sceneMemberID="viewController">
+                <viewController id="TAH-Q7-x0k" customClass="ArticleDetailViewController" customModule="JordanNews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zxp-C8-wxZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -239,7 +239,7 @@ Edit date</string>
                         <outlet property="articleContentLabel" destination="Mdo-cb-7WN" id="K93-u8-8Sa"/>
                         <outlet property="articleDatesLabel" destination="l1z-Pu-F73" id="IgH-X5-Hmu"/>
                         <outlet property="articleImageGradient" destination="FwN-fa-hss" id="Tis-0Y-LbR"/>
-                        <outlet property="articleImageView" destination="eB6-Or-Ec7" id="M4p-g1-J6c"/>
+                        <outlet property="articleImageView" destination="eB6-Or-Ec7" id="gky-4m-fDb"/>
                         <outlet property="articleImageViewAspectConstraint" destination="e9R-NI-sQ9" id="LfL-qn-jzU"/>
                         <outlet property="articleSectionLabel" destination="OQL-uv-csf" id="Gak-Ht-ay6"/>
                         <outlet property="articleTitleLabel" destination="rT9-3r-tsh" id="AKF-cc-Eha"/>

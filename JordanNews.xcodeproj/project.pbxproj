@@ -10,6 +10,7 @@
 		10BC818908A566478EA66AA4 /* libPods-JordanNewsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD95A30716F7129260DF47E /* libPods-JordanNewsTests.a */; };
 		5D394B7120499508008F1023 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D394B7020499508008F1023 /* NSDate+Utilities.m */; };
 		5D394B74204C7B84008F1023 /* NSLayoutConstraint+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D394B73204C7B84008F1023 /* NSLayoutConstraint+Utilities.m */; };
+		5D394B77204C8806008F1023 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D394B76204C8806008F1023 /* ArticleDetailViewController.swift */; };
 		5D872E4A2049495200A354A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D872E492049495200A354A3 /* AppDelegate.m */; };
 		5D872E502049495200A354A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D872E4E2049495200A354A3 /* Main.storyboard */; };
 		5D872E522049495200A354A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D872E512049495200A354A3 /* Assets.xcassets */; };
@@ -21,7 +22,6 @@
 		5D872E812049502600A354A3 /* ArticlesParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D872E802049502600A354A3 /* ArticlesParser.m */; };
 		5D872E85204950EA00A354A3 /* ArticleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D872E84204950EA00A354A3 /* ArticleModel.m */; };
 		5D872E8A2049712B00A354A3 /* ArticlesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D872E892049712B00A354A3 /* ArticlesTableViewController.m */; };
-		5D872E8E2049744200A354A3 /* ArticleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D872E8D2049744200A354A3 /* ArticleDetailViewController.m */; };
 		5D872E9220497BE800A354A3 /* UIColor+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D872E9120497BE800A354A3 /* UIColor+Utilities.m */; };
 		5D872E972049877F00A354A3 /* ArticleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D872E962049877F00A354A3 /* ArticleTableViewCell.m */; };
 		697BD009D0F6ACB8FF1F37F8 /* libPods-JordanNewsUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C14D1501E34D25E3DC73B29F /* libPods-JordanNewsUITests.a */; };
@@ -52,6 +52,8 @@
 		5D394B7020499508008F1023 /* NSDate+Utilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
 		5D394B72204C7B84008F1023 /* NSLayoutConstraint+Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+Utilities.h"; sourceTree = "<group>"; };
 		5D394B73204C7B84008F1023 /* NSLayoutConstraint+Utilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+Utilities.m"; sourceTree = "<group>"; };
+		5D394B75204C8805008F1023 /* JordanNews-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JordanNews-Bridging-Header.h"; sourceTree = "<group>"; };
+		5D394B76204C8806008F1023 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
 		5D872E452049495200A354A3 /* JordanNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JordanNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D872E482049495200A354A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5D872E492049495200A354A3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -74,8 +76,6 @@
 		5D872E84204950EA00A354A3 /* ArticleModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArticleModel.m; sourceTree = "<group>"; };
 		5D872E882049712B00A354A3 /* ArticlesTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArticlesTableViewController.h; sourceTree = "<group>"; };
 		5D872E892049712B00A354A3 /* ArticlesTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArticlesTableViewController.m; sourceTree = "<group>"; };
-		5D872E8C2049744200A354A3 /* ArticleDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArticleDetailViewController.h; sourceTree = "<group>"; };
-		5D872E8D2049744200A354A3 /* ArticleDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArticleDetailViewController.m; sourceTree = "<group>"; };
 		5D872E9020497BE800A354A3 /* UIColor+Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Utilities.h"; sourceTree = "<group>"; };
 		5D872E9120497BE800A354A3 /* UIColor+Utilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Utilities.m"; sourceTree = "<group>"; };
 		5D872E952049877F00A354A3 /* ArticleTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArticleTableViewCell.h; sourceTree = "<group>"; };
@@ -227,8 +227,8 @@
 			children = (
 				5D872E882049712B00A354A3 /* ArticlesTableViewController.h */,
 				5D872E892049712B00A354A3 /* ArticlesTableViewController.m */,
-				5D872E8C2049744200A354A3 /* ArticleDetailViewController.h */,
-				5D872E8D2049744200A354A3 /* ArticleDetailViewController.m */,
+				5D394B76204C8806008F1023 /* ArticleDetailViewController.swift */,
+				5D394B75204C8805008F1023 /* JordanNews-Bridging-Header.h */,
 			);
 			path = Articles;
 			sourceTree = "<group>";
@@ -352,6 +352,7 @@
 				TargetAttributes = {
 					5D872E442049495200A354A3 = {
 						CreatedOnToolsVersion = 9.0.1;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					5D872E5C2049495200A354A3 = {
@@ -567,8 +568,8 @@
 			files = (
 				5D872E7D20494A7600A354A3 /* ApiManager.m in Sources */,
 				5D872E8A2049712B00A354A3 /* ArticlesTableViewController.m in Sources */,
+				5D394B77204C8806008F1023 /* ArticleDetailViewController.swift in Sources */,
 				5D872E9220497BE800A354A3 /* UIColor+Utilities.m in Sources */,
-				5D872E8E2049744200A354A3 /* ArticleDetailViewController.m in Sources */,
 				5D872E85204950EA00A354A3 /* ArticleModel.m in Sources */,
 				5D872E582049495200A354A3 /* main.m in Sources */,
 				5D872E812049502600A354A3 /* ArticlesParser.m in Sources */,
@@ -739,6 +740,7 @@
 			baseConfigurationReference = 84134FE0B86881A7FFC2BEAA /* Pods-JordanNews.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YDJUX2GJN8;
 				INFOPLIST_FILE = JordanNews/Info.plist;
@@ -746,6 +748,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JDN.JordanNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JordanNews/Controllers/Articles/JordanNews-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -755,6 +760,7 @@
 			baseConfigurationReference = 108AAC24AAF894FC5DA92DEC /* Pods-JordanNews.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YDJUX2GJN8;
 				INFOPLIST_FILE = JordanNews/Info.plist;
@@ -762,6 +768,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JDN.JordanNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JordanNews/Controllers/Articles/JordanNews-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -770,6 +778,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B5EE779574C43ADC8A82E0B9 /* Pods-JordanNewsTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YDJUX2GJN8;
@@ -786,6 +795,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5844EA3D94E048A179549DF8 /* Pods-JordanNewsTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YDJUX2GJN8;
@@ -802,6 +812,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9CA77D603B3300BA480D1BCC /* Pods-JordanNewsUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YDJUX2GJN8;
 				INFOPLIST_FILE = JordanNewsUITests/Info.plist;
@@ -817,6 +828,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DD6A1987D90EBD3B5336B05D /* Pods-JordanNewsUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YDJUX2GJN8;
 				INFOPLIST_FILE = JordanNewsUITests/Info.plist;

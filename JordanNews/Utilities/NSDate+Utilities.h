@@ -11,6 +11,6 @@
 @interface NSDate (Utilities)
 
 + (NSDate *) dateFromString:(NSString* )stringDate WithFormatter:(NSString *)stringFormatter;
-- (NSString *) stringFromDatewithFormatter:(NSString *)stringFormatter;
+- (NSString *) stringFromDateWithFormatter:(NSString *)stringFormatter;
 
 @end
